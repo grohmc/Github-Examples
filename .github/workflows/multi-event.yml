@@ -24,3 +24,8 @@ jobs:
           echo "Job ID: $GITHUB_JOB"
           echo "Action: $GITHUB_ACTION"
           echo "Actor: $GITHUB_ACTOR"
+      - name: PWD
+        run: pwd
+      - name: list
+        run: ls -a
+        
