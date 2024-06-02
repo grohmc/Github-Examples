@@ -7,6 +7,11 @@ on:
     branches:
       - main
   workflow_dispatch:
+    inputs:
+      greeting:
+        description: "How to greet user"
+        required: true
+        type: string
 
 jobs:
   hello_world:
@@ -14,6 +19,7 @@ jobs:
     steps:
       - name: "Echo Basic Information"
         run: |
+          echo "Hello, ${{ inputs.greeting }}"
           echo "REF: $GITHUB_REF"
           echo "Job ID: $GITHUB_JOB"
           echo "Action: $GITHUB_ACTION"
