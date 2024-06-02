@@ -28,4 +28,5 @@ jobs:
         run: pwd
       - name: list
         run: ls -a
-        
+      - name: path
+        run: echo ${{ github.action_path }}
